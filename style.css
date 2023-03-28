@@ -3,7 +3,21 @@ body{
 }
 h1{
   color:blue;
+  text-align: center
+}
+h2{
+  text-align: center;
 }
 h3{
   color:darkblue;
+  text-align: center
+}
+h4{
+  color:darkblue;
+  text-align: center
+}
+a {
+display: block;
+width: 200px;
+margin: auto;
 }
