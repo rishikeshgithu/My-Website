@@ -1,10 +1,10 @@
 *{
-padding: 0;
-margin: 0;
+margin: 0px;
 box-sizing: border-box;
 font-family: "Rubik",sans-serif;
 }
 body{
+  padding: 50px;
 background-color: #0772a7;
 }
 .wrapper{
