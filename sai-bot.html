@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<h1>This sai bot</h1>
+<p>Ask it simple question this is under-development</p>
+<p><br /></p>
+<p>So please ask easy question<p/>
+
+<py-script># Importing necessary libraries
+import wikipediaapi
+
+# Creating a Wikipedia object
+wiki = wikipediaapi.Wikipedia('en')
+
+# Defining chatbot function to search for information on Wikipedia
+def search_wikipedia(query):
+    page = wiki.page(query)
+    if page.exists():
+        summary = page.summary[0:5000] # Extracting the first 200 characters of the summary
+        return summary + ' Read more at: ' + page.fullurl
+    else:
+        return 'Sorry, I could not find any information on ' + query
+
+# Starting the conversation
+print('Hello! I am a chatbot. What can I help you with?')
+
+# Chatting with the user
+while True:
+    user_input = input('> ')
+    if user_input.lower() in ['exit', 'quit', 'bye', 'goodbye']:
+        print('Goodbye!')
+        break
+    else:
+        response = search_wikipedia(user_input)
+        print(response)</py-script>|
+</html>
